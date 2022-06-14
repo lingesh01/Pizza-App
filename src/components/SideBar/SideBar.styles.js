@@ -32,6 +32,7 @@ export const Icon = styled.div`
 
 export const CrossIcon = styled(FaTimes)`
     color: #000;
+    cursor: pointer;
 
     &:hover {
         color: #e31837;
@@ -80,3 +81,46 @@ export const SidebarMenuListRouter = styled(Link)`
         transition: 0.2s ease-in-out;
     }
 `;
+
+export const SidebarReturnListRouter = styled(Link)`
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    text-decoration: none;
+    list-style: none;
+    transition: 0.2s ease-in-out;
+    color: #000;
+    cursor: pointer;
+
+    &:hover {
+        color: #e31837;
+        transition: 0.2s ease-in-out;
+    }
+`;
+
+export const SideButton = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 70px ;
+    margin: 0 auto;
+    border: none;
+    background-color: #000;
+    color: #e31837;
+    cursor: pointer;
+    
+
+    &:hover {
+        color:  #ffc500;
+        background-color:#e31837 ;
+        transition: 0.2s ease-in-out;
+    }
+`;
+
+export const SidebarPar = styled.p`
+    margin: 0 auto;
+    margin-top: 15rem;
+    font-size: 3rem;
+    color: #e31837;
+`

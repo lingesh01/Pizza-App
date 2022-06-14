@@ -45,12 +45,18 @@ export const NavIcons = styled.div`
     cursor: pointer;
     color: ${({ color }) => color ? "#000" : "#fff"};
 
-    p {
+    button {
         font-weight: bold;
-        font-size: clamp(2rem, 2.5vw, 5rem);   
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        border: none;
+        padding: 5px 9px;
+        border-radius: 10px;
+        background-color:${({ color }) => color ? "#000" : "#e31837"};
+        color: ${({ color }) => color ? "#fff" : "#fdc500"};
+        cursor: pointer;
         
         &:hover {
-            color: #e31837;
+            transition: 0.2s ease-in-out;
         }
     }
 `

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from "../../images/pizza-2.jpg";
+import background from "./loop.gif";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { MdDelete } from "react-icons/md";
 
@@ -21,6 +21,13 @@ export const CartNavbar = styled.nav`
 
     h1 {
         color: #fff;
+        margin-left: 4rem;
+        font-size: clamp(2.2rem,4vw,3.5rem);
+        letter-spacing: 0.2rem;
+    }
+
+    h2 {
+        color: RED;
         margin-left: 4rem;
         font-size: clamp(2.2rem,4vw,3.5rem);
         letter-spacing: 0.2rem;
@@ -133,6 +140,31 @@ export const CartContent = styled.div`
     }
 
     
+`;
+
+export const SubcartContent = styled.div`
+    color:#DA1212;
+    margin-left: 10rem;
+    width: 60rem;
+
+    h3 {
+        margin-top: 1rem;
+        font-size: 2rem ;
+    }
+
+    h1 {
+        margin-top: 2rem;
+        font-size: 3rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
 `;
 
 export const CartDeletIcon = styled(MdDelete)`
@@ -358,10 +390,40 @@ export const CartNotFound = styled.div`
     justify-content: center;
 
     h1 {
-        font-size: clamp(2.5rem, 4vw, 4.5rem);
-        color:#fff;
-        text-shadow: 0 2px 4px #fdc500;
+        margin-top: 3rem;
+        font-size: clamp(4.5rem, 6vw, 6.5rem);
+        color:#EF2F88;
+        text-shadow: 0 2px 4px #323232;
 
+    }
+    h2 {
+        margin-top: 2rem;
+        font-size: clamp(2rem, 3vw, 3.5rem);
+        color:#ffff;
+        text-shadow: 0 2px 4px #EF2F88;
+
+    }
+
+    button {
+        border: none;
+        font-size: clamp(1rem,4vw,2rem);
+        background-color: #EF2F88;
+        color: #ffff;
+        padding: 0.5rem 3rem;
+        cursor: pointer;
+        letter-spacing: 1px;
+        border-radius: 2px;
+        margin-top: 3rem;
+
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        &:active {
+            transform: scale(0.8);
+            transition: .5s ease-out;
+        }
     }
     
 `;
@@ -378,6 +440,32 @@ export const NotFoundImage = styled.img`
     @media (max-width: 450px) {
         width: 20rem;
         height: 20rem;
+    }
+`;
+
+export const CartButton = styled.button`
+    border: none;
+    font-size: clamp(0.8rem ,2vw, 1.5rem);
+    margin-top: 10rem;
+    padding: .5em 2em;
+    color: #fff;
+    background-color: black;
+    border-radius: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all .2s ease-out;
+
+    &:hover {
+        background-color: #DA1212;
+        color: black;
+        transition: all .5s ease-out;
+        transform: translate(2px ,2px);
+    }
+
+    &:active {
+        transition: all 1s ease-out;
+        transform: translate(-2px ,-2px);
     }
 `;
 
